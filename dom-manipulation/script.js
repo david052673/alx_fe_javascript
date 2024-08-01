@@ -34,9 +34,11 @@ function showRandomQuote () {
   
     
     quotes.push(newQuote);
-     document.innerHTML="newQuote"
+     document.innerHTML="newQuote";
     showRandomQuote();
   }
-
+  const AddQuoteForm=document.createElement("AddQuoteForm")
+  const div=getElementById(#div);
+  div.appendChild(AddQuoteForm)
     
 }
