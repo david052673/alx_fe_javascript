@@ -13,14 +13,14 @@ const quotes =[
 ];
 
 
-function createAddQuoteForm() {
+function showRandomQuote() {
     const qoute = Math.floor(Math.random() * quotes.length);
     const randomQuote = quotes[randomIndex];
     console.log(`"${randomQuote.text}" - ${randomQuote.category}`);
 
-    createAddQuoteForm();
+    showRandomQuote();
 };
-function showRandomQuote () {
+function  createAddQuoteForm() {
 
     const newQuoteText = document.getElementById("newQuoteText").value;
     const newQuoteCategory = document.getElementById("newQuoteCategory").value;
@@ -35,7 +35,7 @@ function showRandomQuote () {
     
     quotes.push(newQuote);
      document.innerHTML="newQuote";
-     showRandomQuote();
+     createAddQuoteForm();
   }
 
     
