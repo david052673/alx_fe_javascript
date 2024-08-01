@@ -1,4 +1,5 @@
-const quotes =[
+document.addEventListener('DOMContentLoaded',
+      const quotes =[
     {text:"EVERYTHING IS GREAT",category:"Advice",
 },
 {
@@ -40,4 +41,4 @@ function  createAddQuoteForm() {
  document.createElement
  newQuoteText.appendChild(newQuote)
     
-}
+);
