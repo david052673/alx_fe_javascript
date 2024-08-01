@@ -13,12 +13,12 @@ const quotes =[
 ];
 
 
-function createAddQuoteForm() {
+function showRandomQoute() {
     const qoute = Math.floor(Math.random() * quotes.length);
     const randomQuote = quotes[randomIndex];
     console.log(`"${randomQuote.text}" - ${randomQuote.category}`);
 
-    createAddQuoteForm();
+    showRandomQoute();
 };
 function showRandomQoute () {
 
