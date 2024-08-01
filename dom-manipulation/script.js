@@ -21,6 +21,7 @@ function showRandomQoute() {
 showRandomQoute();
 };
 function showRandomQuote () {
+
     const newQuoteText = document.getElementById("newQuoteText").value;
     const newQuoteCategory = document.getElementById("newQuoteCategory").value;
   
@@ -28,11 +29,12 @@ function showRandomQuote () {
     const newQuote = {
       text: newQuoteText,
       category: newQuoteCategory,
+      
     };
   
     
     quotes.push(newQuote);
-
+     document.innerHTML="newQuote"
     showRandomQuote();
   }
 
