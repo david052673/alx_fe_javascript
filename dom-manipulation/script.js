@@ -20,7 +20,7 @@ function showRandomQoute() {
 
 showRandomQoute();
 };
-function showRandomQuote () {
+function createAddQuoteForm () {
 
     const newQuoteText = document.getElementById("newQuoteText").value;
     const newQuoteCategory = document.getElementById("newQuoteCategory").value;
@@ -35,10 +35,8 @@ function showRandomQuote () {
     
     quotes.push(newQuote);
      document.innerHTML="newQuote";
-    showRandomQuote();
+     createAddQuoteForm();
   }
-  const AddQuoteForm=document.createElement("AddQuoteForm")
-  const div=getElementById(#div);
-  div.appendChild(AddQuoteForm)
+
     
 }
