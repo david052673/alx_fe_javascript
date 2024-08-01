@@ -53,7 +53,7 @@ var storedquotes = JSON.parse(localStorage.getItem("quotes"));
 sessionStorage.setItem("quotes", "");
 sessionStorage.getItem("quotes");
 
-function exportQuotes() {
+function Export Quotes() {
   const json = JSON.stringify(quotes);
   const blob = new Blob([json], { type: "application/json" });
   const url = URL.createObjectURL(blob);
