@@ -46,6 +46,39 @@ function  createAddQuoteForm() {
 
 
 
+
+localStorage.setItem("quotes", JSON.stringify(quotes));
+var storedquotes = JSON.parse(localStorage.getItem("quotes"));
+
+sessionStorage.setItem("quotes", "");
+sessionStorage.getItem("quotes");
+
+function exportQuotes() {
+  const json = JSON.stringify(quotes);
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = url;
+  a.download = "quotes.json"; 
+
+
+  document.body.appendChild(a);
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
+const exportButton = document.getElementById("exportButton");
+exportButton.addEventListener("click", exportQuotes);
+
+
+
+
+
+
 function importFromJsonFile(event) {
     const fileReader = new FileReader();
     fileReader.onload = function(event) {
