@@ -37,6 +37,7 @@ function  createAddQuoteForm() {
      document.innerHTML="newQuote";
      createAddQuoteForm();
   }
-
+ document.createElement
+ newQuoteText.appendChild(newQuote)
     
 }
