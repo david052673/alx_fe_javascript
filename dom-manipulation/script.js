@@ -34,7 +34,7 @@ function  createAddQuoteForm() {
     };
   
     
-    quotes.push(newQuote);
+    #button.push(newQuote);
      document.innerHTML="newQuote";
      createAddQuoteForm();
   }
@@ -73,6 +73,14 @@ function Export Quotes() {
 
 const Export Quotes Button = document.getElementById("ExportQuotesButton");
 exportButton.addEventListener("click", Export Quotes);
+
+
+const button= document.createElement("Button");
+button.id="categoryFilter"
+button.textContent="All Categories"
+category.push(button)
+
+
 
 
 
