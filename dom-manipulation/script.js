@@ -93,7 +93,7 @@ function importFromJsonFile(event) {
     fileReader.readAsText(event.target.files[0]);
   }
 
-
+//step 2
 
   function select(quotes) {
     var self = this;
@@ -114,3 +114,32 @@ function filterfunction(quotes) {
   select()
 }
 localStorage.setItem('select()')
+
+
+
+
+
+// step 3
+
+
+await fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
+  const newPost = {
+    userId: 1,
+    title: 'My New Post',
+    body: 'This is the content of my post.',
+  };
+  
+   await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify(newPost),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then(response => response.json())
+    .then(data => console.log(data));
+  
