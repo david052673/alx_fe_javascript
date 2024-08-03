@@ -122,9 +122,10 @@ localStorage.setItem('select()')
 // step 3
 
 
-await fetch('https://jsonplaceholder.typicode.com/posts/1')
+  function fetchQuotesFromServer(){
+    await fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => console.log(data))};
 
 
   const newPost = {
