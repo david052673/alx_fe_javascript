@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',
-      const quotes =[
+      quotes =[
     {text:"EVERYTHING IS GREAT",category:"Advice",
 },
 {
@@ -53,7 +53,7 @@ var storedquotes = JSON.parse(localStorage.getItem("quotes"));
 sessionStorage.setItem("quotes", "");
 sessionStorage.getItem("quotes");
 
-function Export Quotes() {
+function ExportQuotes() {
   const json = JSON.stringify(quotes);
   const blob = new Blob([json], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -82,11 +82,6 @@ category.push(button)
 
 
 
-
-
-
-
-
 function importFromJsonFile(event) {
     const fileReader = new FileReader();
     fileReader.onload = function(event) {
@@ -97,3 +92,25 @@ function importFromJsonFile(event) {
     };
     fileReader.readAsText(event.target.files[0]);
   }
+
+
+
+  function select(quotes) {
+    var self = this;
+    self.contacts = ko.observableArray(quotes);
+  
+    self.uniqueSelect = ko.dependentObservable(function() {
+      var types = ko.utils.arrayMap(self.contacts(), function(item) {
+        return item.type;
+      });
+      return ko.utils.arrayGetDistinctValues(types).sort();
+    }, self);
+  }
+  
+  ko.applyBindings(new ContactsViewModel(quotes));
+
+
+function filterfunction(quotes) {
+  select()
+}
+localStorage.setItem('select()')
