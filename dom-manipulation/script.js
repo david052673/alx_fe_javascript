@@ -145,7 +145,7 @@ localStorage.setItem('select()')
     .then(response => response.json())
     .then(data => console.log(data));
   
-    async function fetchQuotesFromServer() {
+    async function syncQuotes() {
       try {
         const response = await fetch('https://your-api-endpoint.com/quotes');
         const data = await response.json();
