@@ -97,17 +97,17 @@ function importFromJsonFile(event) {
 
   function select(quotes) {
     var self = this;
-    self.contacts = ko.observableArray(quotes);
+    self.contacts = ko.quotesArray(quotes);
   
-    self.uniqueSelect = ko.dependentObservable(function() {
-      var types = ko.utils.arrayMap(self.contacts(), function(item) {
+    self.uniqueSelect = ko.quotes(function() {
+      var types = ko.utils.Map(self.text(), function(item) {
         return item.type;
       });
       return ko.utils.arrayGetDistinctValues(types).sort();
     }, self);
   }
   
-  ko.applyBindings(new ContactsViewModel(quotes));
+  ko.applyBindings(new populateCategories(quotes));
 
 
 function filterfunction(quotes) {
