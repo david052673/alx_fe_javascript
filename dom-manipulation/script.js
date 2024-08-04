@@ -125,7 +125,14 @@ function filterQuote(quotes) {
 }
 localStorage.setItem('select()')
 const quotes = [
-  // Your list of quotes here...
+  {text:"EVERYTHING IS GREAT",category:"Advice",
+  },
+  {
+      text:"Golden Hit", category:"book",
+  },
+  {
+      text:"THE FORCE", category:"movie"
+  }
 ];
 
 const quoteDisplay = quotes.filterQuote((quote) => {
