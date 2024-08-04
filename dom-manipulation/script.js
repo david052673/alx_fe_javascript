@@ -109,6 +109,16 @@ function importFromJsonFile(event) {
   
   ko.applyBindings(new (quotes));
 
+  var myDropdown = document.getElementById('myDropdown');
+var uniqueSelectValue = 'option2';
+
+for (var i = 0; i < myDropdown.options.length; i++) {
+    if (myDropdown.options[i].value === uniqueSelectValue) {
+        myDropdown.selectedIndex = i;
+        break;
+    }
+}
+
 
 function filterfunction(quotes) {
   select()
