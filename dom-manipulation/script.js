@@ -95,19 +95,19 @@ function importFromJsonFile(event) {
 
 //step 2
 
-  function select(quotes) {
+  function populateCategories(quotes) {
     var self = this;
     self.contacts = ko.quotesArray(quotes);
   
     self.uniqueSelect = ko.quotes(function() {
-      var types = ko.utils.Map(self.text(), function(item) {
+      var types = ko.utils.map(self.text(), function(item) {
         return item.type;
       });
       return ko.utils.arrayGetDistinctValues(types).sort();
     }, self);
   }
   
-  ko.applyBindings(new populateCategories(quotes));
+  ko.applyBindings(new (quotes));
 
 
 function filterfunction(quotes) {
