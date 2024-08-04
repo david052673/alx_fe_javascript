@@ -120,10 +120,18 @@ for (var i = 0; i < myDropdown.options.length; i++) {
 }
 
 
-function filterfunction(quotes) {
+function filterQuote(quotes) {
   select()
 }
 localStorage.setItem('select()')
+const quotes = [
+  // Your list of quotes here...
+];
+
+const quoteDisplay = quotes.filterQuote((quote) => {
+  
+  return quote.category === selectedCategory;
+});
 
 
 
