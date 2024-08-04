@@ -150,6 +150,7 @@ localStorage.setItem('select()')
         const response = await fetch('https://your-api-endpoint.com/quotes');
         const data = await response.json();
         return data;
+        alert("Quotes synced with server!")
       } catch (error) {
         console.error('Error fetching quotes:', error);
         return null;
@@ -167,6 +168,7 @@ localStorage.setItem('select()')
         const serverQuotes = await fetchQuotesFromServer();
         if (serverQuotes) {
           updateLocalStorage(serverQuotes);
+          
         }
       }, 60000); 
     }
