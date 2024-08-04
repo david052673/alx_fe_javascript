@@ -145,3 +145,31 @@ localStorage.setItem('select()')
     .then(response => response.json())
     .then(data => console.log(data));
   
+    async function fetchQuotesFromServer() {
+      try {
+        const response = await fetch('https://your-api-endpoint.com/quotes');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error fetching quotes:', error);
+        return null;
+      }
+    }
+    
+  
+    function updateLocalStorage(quotes) {
+      localStorage.setItem('quotes', JSON.stringify(quotes));
+    }
+    
+    
+    function pollAndUpdateQuotes() {
+      setInterval(async () => {
+        const serverQuotes = await fetchQuotesFromServer();
+        if (serverQuotes) {
+          updateLocalStorage(serverQuotes);
+        }
+      }, 60000); 
+    }
+    
+    
+    pollAndUpdateQuotes();
