@@ -138,9 +138,9 @@ localStorage.setItem('select()')
     method: 'POST',
     body: JSON.stringify(newPost),
     headers: {
-      "Content-type": 'application/json; charset=UTF-8',
+      "Content-Type": 'application/json; charset=UTF-8',
     },
-    "Content-type": 'application/json; charset=UTF-8'
+    
   })
     .then(response => response.json())
     .then(data => console.log(data));
